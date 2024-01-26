@@ -2,7 +2,16 @@
 let m = 5;
 let n = 10;
 let sum = 0;
-for(let i = m; i <= n; i++) {
-    sum += i;
+// for(let i = m; i <= n; i++) {
+//     sum += i;
+// }
+// console.log(sum);
+
+function rec(sum,m,n){
+    if(m > n){
+        return sum;
+    }
+    return m + rec(sum,m + 1,n)
 }
-console.log(sum);
+
+console.log(rec(sum,m,n));
